@@ -5,9 +5,18 @@ class MyWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      backgroundColor: Colors.yellow,
-      body: Column(
+    return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.white,
+        leading: CircleAvatar(
+          child: Image.asset('assets/ayanba.jpg'),
+        ),
+        title: const Text(
+          'AYANBA MEDIA',
+          style: TextStyle(fontSize: 30, color: Colors.green),
+        ),
+      ),
+      body: const Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Center(
@@ -15,7 +24,7 @@ class MyWidget extends StatelessWidget {
               '0',
               style: TextStyle(fontSize: 50),
             ),
-          )
+          ),
         ],
       ),
     );
